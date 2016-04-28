@@ -1,0 +1,15 @@
+<div class="sblog_pages">
+  <div class="sblog_pages_prev">
+    <% if (page.prev) { %>
+      <a href="<%- config.root %><%- page.prev_link %>"><%= __('prev') %></a>
+    <% } %>
+  </div>
+  <div class="sblog_pages_next">
+    <% if (page.next) { %>
+      <a href="<%- config.root %><%- page.next_link %>"><%= __('next') %></a>
+    <% } %>
+  </div>
+  <div class="sblog_pages_current">
+    <%= page.current %> of <%= page.total %>
+  </div>
+</div>

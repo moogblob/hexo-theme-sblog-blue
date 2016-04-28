@@ -1,0 +1,35 @@
+<%- partial('_partial/head') %>
+
+<body>
+  <div id="sblog_root">
+    <div id="sblog_head">
+      <%- partial('_partial/header') %>
+    </div>
+    <!-- MENU START -->
+    <div id="sblog_menu">
+      <ul>
+        <% for (var i in theme.menu){ %>
+          <li><a href="<%- config.root %><%- theme.menu[i] %>"><%= i %></a></li>
+        <% } %>
+      </ul>
+    </div>
+
+    <div id="sblog_body">
+      <div id="sblog_block_body">
+        <%- partial('_partial/sidebar', {}, {cache: true}) %>
+      </div>
+      <div id="sblog_main">
+        <%- body %>
+      </div>
+    </div>
+
+    <div id="sblog_copy">
+      <%- partial('_partial/copy') %>
+    </div>
+    <div id="sblog_foot">
+      <%- partial('_partial/footer') %>
+    </div>
+    <%- partial('_partial/after_footer') %>
+  </div>
+</body>
+</html>

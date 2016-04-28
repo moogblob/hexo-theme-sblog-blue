@@ -1,0 +1,17 @@
+<% if (site.posts.length){ %>
+<div class="sblog_block">
+  <div class="sblog_block_topic">
+    <h2 class="sblog_block_topic_text"><%= __('recent_posts') %></h2>
+  </div>
+
+	<div class="sblog_block_text">
+    <ul>
+      <% site.posts.sort('date', -1).limit(5).each(function(post){ %>
+        <li>
+          <a href="<%= config.root %><%= post.path %>"><%= post.title %></a>
+        </li>
+      <% }); %>
+    </ul>
+  </div>
+</div>
+<% } %>

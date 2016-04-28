@@ -1,0 +1,20 @@
+<div class="sblog_post <%= item.layout %>">
+		<div class="sblog_post_topic">
+      <h1 class="sblog_post_topic_text"><%- partial('post/title') %></h1>
+    </div>
+		<div class="sblog_post_text">
+      <%- partial('post/category') %>
+      <%- partial('post/tag') %>
+			<div class="sblog_post_edit"><%= __('posted') %> <%= item.date.toDate().toISOString() %></div><br>
+        <% if (item.excerpt && index){ %>
+          <%- item.excerpt %>
+        <% } else { %>
+          <%- item.content %>
+        <% } %>
+       <div class="sblog_line"></div>
+		</div>
+		<div class="sblog_post_options">
+      <%- partial('post/share') %>
+      <a href="<%- item.permalink %>" title="Permalink" class="sblog_post_options_link_perma">Permalink</a>
+	</div>
+</div>

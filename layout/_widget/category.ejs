@@ -1,0 +1,14 @@
+<% if (site.categories.length){ %>
+<div class="sblog_block">
+  <div class="sblog_block_topic">
+    <h2 class="sblog_block_topic_text"><%= __('categories') %></h2>
+  </div>
+  <div class="sblog_block_text">
+    <ul class="entry">
+    <% site.categories.sort('name').each(function(item){ %>
+      <li><a href="<%- config.root %><%- item.path %>"><%= item.name %></a> <%= item.posts.length %></li>
+    <% }); %>
+    </ul>
+  </div>
+</div>
+<% } %>

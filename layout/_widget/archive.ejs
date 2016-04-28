@@ -1,0 +1,10 @@
+<% if (site.posts.length) { %>
+<div class="sblog_block">
+  <div class="sblog_block_topic">
+    <h2 class="sblog_block_topic_text"><%= __('archive_a') %></h2>
+  </div>
+  <div class="sblog_block_text">
+    <%- list_archives({show_count:false}) %>
+  </div>
+</div>
+<% } %>

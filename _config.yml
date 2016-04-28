@@ -1,0 +1,22 @@
+menu:
+  Home: 
+
+widgets:
+- search
+- category
+- tag
+- recent_posts
+- archive
+
+excerpt_link: Read More
+
+addthis:
+  enable: false
+  pubid:
+  facebook: true
+  twitter: true
+  google: true
+  pinterest: true
+
+google_analytics:
+rss:

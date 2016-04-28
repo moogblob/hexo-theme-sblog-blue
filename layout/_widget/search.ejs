@@ -1,0 +1,11 @@
+<form id="search" accept-charset="utf-8" method="get" action="//google.com/search">
+		<div class="sblog_block">
+			<div class="sblog_block_topic">
+				<h2 class="sblog_block_topic_text"><%= __('Search') %></h2>
+			</div>
+			<div class="sblog_block_text">
+				<input type="search" name="q" id="keyword" value="" class="sblog_search" placeholder="<%= __('search') %>">
+        <input type="hidden" name="q" value="site:<%- config.url.replace(/^https?:\/\//, '') %>">
+			</div>
+		</div>
+	</form>
